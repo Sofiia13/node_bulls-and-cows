@@ -6,12 +6,12 @@ const { getBullsAndCows } = require('./modules/getBullsAndCows');
 const { generateRandomNumber } = require('./modules/generateRandomNumber');
 const { checkIsValidUserInput } = require('./modules/checkIsValidUserInput');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
 const main = () => {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
   const secretNumber = generateRandomNumber();
 
   // eslint-disable-next-line no-console
@@ -45,6 +45,8 @@ const main = () => {
   ask();
 };
 
-main();
+if (require.main === module) {
+  main();
+}
 
 module.exports = { main };
