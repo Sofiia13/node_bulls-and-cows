@@ -24,6 +24,8 @@ function checkIsValidUserInput(userInput) {
     return false;
   }
 
+  if (!/^\d+$/.test(str)) return false;
+
   return true;
 }
 

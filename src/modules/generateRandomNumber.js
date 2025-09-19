@@ -21,7 +21,7 @@ function generateRandomNumber() {
     number += digit;
   }
 
-  return number;
+  return Number(number);
 }
 
 module.exports = {
