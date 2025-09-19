@@ -14,7 +14,9 @@ function generateRandomNumber() {
     const randomIndex = Math.floor(Math.random() * digits.length);
     const digit = digits[randomIndex];
 
-    if (number.length === 0 && digit === '0') continue;
+    if (number.length === 0 && digit === '0') {
+      continue;
+    }
 
     number += digit;
     digits.splice(randomIndex, 1);

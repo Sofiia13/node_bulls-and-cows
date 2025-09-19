@@ -12,10 +12,21 @@ function checkIsValidUserInput(userInput) {
   const str = String(userInput);
   const set = new Set(str);
 
-  if (str.length !== 4) return false;
-  if (str.charAt(0) === '0') return false;
-  if (str.length !== set.size) return false;
-  if (!/^\d+$/.test(str)) return false;
+  if (str.length !== 4) {
+    return false;
+  }
+
+  if (str.charAt(0) === '0') {
+    return false;
+  }
+
+  if (str.length !== set.size) {
+    return false;
+  }
+
+  if (!/^\d+$/.test(str)) {
+    return false;
+  }
 
   return true;
 }
