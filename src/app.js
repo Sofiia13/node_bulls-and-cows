@@ -26,7 +26,7 @@ const main = () => {
         return ask();
       }
 
-      const { bulls, cows } = getBullsAndCows(secretNumber, answer);
+      const { bulls, cows } = getBullsAndCows(answer, secretNumber);
 
       if (bulls === 4) {
         // eslint-disable-next-line no-console

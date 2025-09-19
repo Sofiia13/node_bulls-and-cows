@@ -12,13 +12,12 @@ function generateRandomNumber() {
 
   while (number.length < 4) {
     const randomIndex = Math.floor(Math.random() * digits.length);
-    const digit = digits.splice(randomIndex, 1)[0];
+    const digit = digits[randomIndex];
 
-    if (number.length === 0 && digit === '0') {
-      continue;
-    }
+    if (number.length === 0 && digit === '0') continue;
 
     number += digit;
+    digits.splice(randomIndex, 1);
   }
 
   return Number(number);
